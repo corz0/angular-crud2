@@ -1,0 +1,8 @@
+[user]
+	name = pablo miguel
+	email = pablomc009@gmail.com
+[color]
+	status = auto
+	branch = auto
+	diff = auto
+	interactive = auto

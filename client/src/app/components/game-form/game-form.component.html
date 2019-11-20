@@ -1,0 +1,28 @@
+<div class="col-md-4 offset-md-2">
+    <div class="card bg-dark">
+        <div class="card-body ">
+            <form >
+                <div class="form-group">
+                    <input type="text" [(ngModel)]="game.title" name="title" placeholder="Titulo" class="form-control" autofocus />
+                </div>
+                
+                <div class="form-group">
+                    <textarea placeholder="Descripcion" [(ngModel)]="game.description" name="description" cols="30" rows="2" class="form-control"> </textarea>
+                </div>
+
+                <div class="form-group">
+                        <input type="url" [(ngModel)]="game.image" name="image" placeholder="URL imagen" class="form-control" />
+                </div>
+                <button class="btn btn-success btn-block" (click)="edit ?  updateGame() : saveNewGame()">Guardar</button>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <h3>{{game.id }}. {{game.title == '' ? 'Titulo' : game.title}}</h3>
+        <img [src]="game.image == '' ? '/assets/messi.jpg' : game.image" class="card-img-top">
+        <p>{{game.description == '' ? 'Descripción' : game.description}}</p>
+        <p>{{game.created_at | date: 'yyyy-MM-dd'}}</p>
+    </div>
+</div>
